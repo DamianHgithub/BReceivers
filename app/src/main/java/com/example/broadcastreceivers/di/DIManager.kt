@@ -16,5 +16,7 @@ class DIManager(): Application() {
                 utilModule
             ))
         }
+        val randomReceiver = get<RandomReceiver>()
+        registerReceiver(randomReceiver, IntentFilter(("android.net.conn.CONNECTIVITY_CHANGE")))
     }
 }
